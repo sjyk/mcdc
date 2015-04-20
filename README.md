@@ -1,2 +1,6 @@
 # mcdc
 Minimum Conductance Dissimilarity Cut
+
+As established by Herlocker et al and Ekstrand et al, recommender systems that consider diversity and novelty as well as expected ratings when selecting sets of items to recommend can increase user engagement and exposure to a broader base of inventory.  
+These 3 metrics of the recommended set define a multi-objective optimization problem that is difficult to solve. Existing approaches rely on iterative optimization techniques like evolutionary algorithms or simulated annealing. In this paper, we present MCDC, an algorithm for approximately solving this problem that treats it as an eigenvector problem, solving a graph partition problem on a weighted dissimilarity graph.
+MCDC efficiently exploits the local-global structure of the problem (novelty is a global property and diversity is a local property) to approximate a Pareto-optimal balance between novelty, coverage (which is related to diversity), and the recommendation score. Results with several datasets, including Jester and the latest Movielens data, show that MCDC provides recommendations sets with up to 10\% higher combined geometric mean values and that MCDC is up to an order of magnitude faster than previous methods. MCDC can be easily applied to any recommender system based on a user-item ratings matrix. 
